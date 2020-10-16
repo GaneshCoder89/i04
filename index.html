@@ -807,7 +807,7 @@
                         </div>
                         <div class="form-check">
                           <label class="form-check-label" for="check2">
-                            <input class=form-check-input  type=checkbox >Work instruction & completion tracking
+                            <input class=form-check-input onclick="clickWorkTemp()"  type=checkbox >Work instruction & completion tracking
                           </label>
                         </div>
                         <div class="form-check">
@@ -836,7 +836,7 @@
                     <p style="margin-top: 10px;font-weight: bold;">Build from Scratch:</p>
                     <form >
                         <div class="form-check">
-                            <label class="form-check-label" for="check2">
+                            <label class="form-check-label" for="check8">
 
                                <input class=form-check-input id=check1 type=checkbox name=option1 onclick=ShowERP() value=something>Build from idea
                             </label>
@@ -848,12 +848,12 @@
                     <form action="/action_page.php">
                         <div class="form-check">
                             <label class="form-check-label" for="check1">
-                                <input class=form-check-input id=check2 type=checkbox name=option2
+                                <input class=form-check-input id=check7 type=checkbox name=option2
                                     onclick=ShowExcel() value=something>Spreadsheet
                             </label>
                         </div>
                         <div class="form-check">
-                            <label class="form-check-label" for="check2">
+                            <label class="form-check-label" for="check6">
                                 <input type="checkbox" class="form-check-input" disabled>Google Sheets
                             </label>
                         </div>
@@ -875,7 +875,7 @@
                             <form>
                                 <div class=form-check>
                                     <label for=check1 class=form-check-label>
-                                        <input class=form-check-input type=checkbox disabled checked value=something>Production Order
+                                        <input class=form-check-input type=checkbox  value=something>Production Order
                                     </label>
                                 </div>
                             </form>
@@ -884,10 +884,61 @@
                 </div>
             </div>
             <div class=modal-footer>
-                <button class="btn btn-primary" type=button data-dismiss=modal id=btnUpd onclick=onSUp() style=display:none>Submit</button>
+                <button class="btn btn-primary" type=button data-dismiss=modal data-toggle="modal" data-target="#FieldMapModal" id=btnUpd  style=display:none>Submit</button>
                 <button class="btn btn-primary" type=button data-dismiss=modal id=btnAPI onclick='window.location.href="landingPage.html"'>Submit</button>
                 <button class="btn btn-primary" type=button data-dismiss=modal>Close</button>
             </div>
         </div>
     </div>
 </div>
+
+ <!-- The FieldModal -->
+ <div class="modal" id="FieldMapModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Field Mapping</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <div class="container">
+  <ul class="list-group" style="width:400px">
+    <li class="list-group-item list-group-item-secondary"> Fields used from Production Order object comming from ERP</li>
+    <li class="list-group-item list-group-item">Production Order</li>
+    <li class="list-group-item list-group-item">Product description</li> 
+    <li class="list-group-item list-group-item">Quantity</li>
+    <li class="list-group-item list-group-item">Due Date</li>
+    <li class="list-group-item list-group-item">Color</li>
+    <li class="list-group-item list-group-item">Size</li>
+    <li class="list-group-item list-group-item">Material</li>
+  </ul>
+</div>
+
+<div class="container">
+  <ul class="list-group" style="width:400px; margin-top:10px">
+    <li class="list-group-item list-group-item-secondary">Fields needed in the spreadsheet</li>
+    <li class="list-group-item list-group-item">Steps</li> 
+    <li class="list-group-item list-group-item">Main Activity</li>
+    <li class="list-group-item list-group-item">Description</li>
+    <li class="list-group-item list-group-item">Parts Used</li>
+    <li class="list-group-item list-group-item">PartQuantity</li>
+    <li class="list-group-item list-group-item">Base part</li>
+    <li class="list-group-item list-group-item">BaseQuantity</li>
+    <li class="list-group-item list-group-item">Image</li>
+  </ul>
+</div>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=onSUp()>Confirm</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
