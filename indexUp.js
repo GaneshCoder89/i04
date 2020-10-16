@@ -52,36 +52,36 @@ function onUpload(e) {
 }
 function showScan() {
     document.getElementById("idFrame").src = "sc.html",
-    document.getElementById("idFrame").style.visibility = "visible",
-    document.getElementById("idFrame").width = "98%"
+    document.getElementById("idFrame").style.visibility = "visible";
+   // document.getElementById("idFrame").width = "98%";
 
 }
 
 function showStep1() {
     document.getElementById("idFrame").src = "st1.html",
-    document.getElementById("idFrame").style.visibility = "visible",
-    document.getElementById("idFrame").width = "98%"
+    document.getElementById("idFrame").style.visibility = "visible";
+   // document.getElementById("idFrame").width = "98%"
 
 }
 
 function showStep2() {
     document.getElementById("idFrame").src = "st2.html",
-    document.getElementById("idFrame").style.visibility = "visible",
-    document.getElementById("idFrame").width = "98%"
+    document.getElementById("idFrame").style.visibility = "visible"
+   // document.getElementById("idFrame").width = "98%"
 
 }
 
 function showStep3() {
     document.getElementById("idFrame").src = "st3.html",
-    document.getElementById("idFrame").style.visibility = "visible",
-    document.getElementById("idFrame").width = "98%"
+    document.getElementById("idFrame").style.visibility = "visible";
+   // document.getElementById("idFrame").width = "98%"
 
 }
 
 function showStep4() {
     document.getElementById("idFrame").src = "st4.html",
-    document.getElementById("idFrame").style.visibility = "visible",
-    document.getElementById("idFrame").width = "98%"
+    document.getElementById("idFrame").style.visibility = "visible";
+  //  document.getElementById("idFrame").width = "98%"
 
 }
 
